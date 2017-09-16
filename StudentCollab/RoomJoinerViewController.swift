@@ -58,7 +58,7 @@ class Room {
 }
 
 class Student {
-    var name : String = "name"
+    var name : String = ""
     var answered : Int = 0
     var correct : Int = 0
 }
