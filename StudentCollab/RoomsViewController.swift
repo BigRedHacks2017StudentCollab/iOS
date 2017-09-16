@@ -10,7 +10,9 @@ import UIKit
 import Firebase
 
 class RoomsViewController: UIViewController, UITableViewDataSource{
-
+    
+    @IBAction func createButtonClick(_ sender: Any) {
+    }
     var ref: DatabaseReference!
     @IBOutlet weak var roomsTableView: UITableView!
     var roomsDatabaseListener : UInt!
@@ -66,6 +68,7 @@ class RoomsViewController: UIViewController, UITableViewDataSource{
         // Docs
         roomsDatabaseListener = ref.child("rooms").observe(DataEventType.value, with: { (snapshot) in
             if !snapshot.exists() { return }
+            self.rooms = [Room]();
             let enumerator = snapshot.children
             while let roomSnap = enumerator.nextObject() as? DataSnapshot {
                 guard let room = roomSnap.value as? [String: Any] else { continue }
@@ -83,11 +86,6 @@ class RoomsViewController: UIViewController, UITableViewDataSource{
     func createButtonDialogInit() {
         // Dialog setup for when the create button is clicked
         // Using SCL Alert View
-    }
-    
-    @IBAction func NewRoomButton(_ sender: UIButton) {
-        // Event when the plus button is clicked
-        // It should call a showing of the createButtonDialog
     }
     
 }

@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piK-de-Stt">
-                                <rect key="frame" x="16" y="28" width="138" height="48"/>
+                                <rect key="frame" x="16" y="52" width="138" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="138" id="Cof-to-Rbk"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvT-W4-Qea">
-                                <rect key="frame" x="313" y="36" width="46" height="38"/>
+                                <rect key="frame" x="313" y="56" width="46" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="8DF-MU-3tq"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="9ew-XM-fnI"/>
@@ -42,19 +42,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="NewRoomButton:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="UXb-qm-OZt"/>
+                                    <action selector="createButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kYW-q4-82c"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1G-Ov-zKm">
-                                <rect key="frame" x="33" y="109" width="342" height="558"/>
+                                <rect key="frame" x="33" y="156" width="370" height="511"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableCell" id="yPW-Fg-CPu" customClass="RoomsTableViewCell" customModule="StudentCollab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="342" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="370" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yPW-Fg-CPu" id="ipm-QG-Z8m">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPl-ce-qUB">
@@ -64,8 +64,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAJ-16-im4">
-                                                    <rect key="frame" x="284" y="5" width="50" height="46.5"/>
-                                                    <state key="normal" title="Enter &gt;"/>
+                                                    <rect key="frame" x="340" y="5" width="30" height="46.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                    <state key="normal" title="&gt;">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -73,8 +77,8 @@
                                                 <constraint firstItem="NPl-ce-qUB" firstAttribute="top" secondItem="ipm-QG-Z8m" secondAttribute="top" constant="8" id="7SG-B6-VUI"/>
                                                 <constraint firstItem="vAJ-16-im4" firstAttribute="top" secondItem="ipm-QG-Z8m" secondAttribute="top" constant="5" id="CbK-Gi-8LG"/>
                                                 <constraint firstAttribute="bottom" secondItem="vAJ-16-im4" secondAttribute="bottom" constant="8.5" id="Hcd-xU-ra1"/>
-                                                <constraint firstAttribute="trailing" secondItem="vAJ-16-im4" secondAttribute="trailing" constant="8" id="Ts5-1b-CCq"/>
                                                 <constraint firstItem="NPl-ce-qUB" firstAttribute="leading" secondItem="ipm-QG-Z8m" secondAttribute="leading" constant="8" id="bnv-Zp-VwI"/>
+                                                <constraint firstAttribute="trailing" secondItem="vAJ-16-im4" secondAttribute="trailing" id="j0s-eV-rpM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -88,8 +92,8 @@
                         <constraints>
                             <constraint firstItem="EvT-W4-Qea" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XkO-EJ-JdH"/>
                             <constraint firstItem="piK-de-Stt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YsW-kh-xGU"/>
-                            <constraint firstItem="piK-de-Stt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="eie-hX-I17"/>
-                            <constraint firstItem="EvT-W4-Qea" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="kZv-LE-v9e"/>
+                            <constraint firstItem="piK-de-Stt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="eck-66-kZb"/>
+                            <constraint firstItem="EvT-W4-Qea" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="pF3-wO-Eow"/>
                         </constraints>
                     </view>
                     <connections>
