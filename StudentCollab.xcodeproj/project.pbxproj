@@ -10,6 +10,8 @@
 		6BDE67FA06BCFEA6CA0F79B8 /* Pods_StudentCollab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C6BC8F008F288C4D855567 /* Pods_StudentCollab.framework */; };
 		7122A5FE31F7AEEEBA2A7AE5 /* Pods_StudentCollabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6E7399195B73E170B18A97 /* Pods_StudentCollabUITests.framework */; };
 		A47185E939CDE666E232934A /* Pods_StudentCollabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19B013AADB4939882B8FA55 /* Pods_StudentCollabTests.framework */; };
+		D95C36691F6D869A006484C9 /* RoomJoinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C36681F6D869A006484C9 /* RoomJoinerViewController.swift */; };
+		D95C366B1F6D8D1D006484C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D95C366A1F6D8D1D006484C9 /* GoogleService-Info.plist */; };
 		D9A1B8181F6D7E5500B95DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A1B8171F6D7E5500B95DF5 /* AppDelegate.swift */; };
 		D9A1B81A1F6D7E5500B95DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A1B8191F6D7E5500B95DF5 /* ViewController.swift */; };
 		D9A1B81D1F6D7E5500B95DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A1B81B1F6D7E5500B95DF5 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		AA6E7399195B73E170B18A97 /* Pods_StudentCollabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentCollabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19B013AADB4939882B8FA55 /* Pods_StudentCollabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentCollabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC45F7E839719EE5F3AF4861 /* Pods-StudentCollab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentCollab.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentCollab/Pods-StudentCollab.release.xcconfig"; sourceTree = "<group>"; };
+		D95C36681F6D869A006484C9 /* RoomJoinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomJoinerViewController.swift; sourceTree = "<group>"; };
+		D95C366A1F6D8D1D006484C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9A1B8141F6D7E5500B95DF5 /* StudentCollab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentCollab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A1B8171F6D7E5500B95DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A1B8191F6D7E5500B95DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,12 +141,14 @@
 		D9A1B8161F6D7E5500B95DF5 /* StudentCollab */ = {
 			isa = PBXGroup;
 			children = (
+				D95C366A1F6D8D1D006484C9 /* GoogleService-Info.plist */,
 				D9A1B8171F6D7E5500B95DF5 /* AppDelegate.swift */,
 				D9A1B8191F6D7E5500B95DF5 /* ViewController.swift */,
 				D9A1B81B1F6D7E5500B95DF5 /* Main.storyboard */,
 				D9A1B81E1F6D7E5500B95DF5 /* Assets.xcassets */,
 				D9A1B8201F6D7E5500B95DF5 /* LaunchScreen.storyboard */,
 				D9A1B8231F6D7E5500B95DF5 /* Info.plist */,
+				D95C36681F6D869A006484C9 /* RoomJoinerViewController.swift */,
 			);
 			path = StudentCollab;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A1B8221F6D7E5500B95DF5 /* LaunchScreen.storyboard in Resources */,
+				D95C366B1F6D8D1D006484C9 /* GoogleService-Info.plist in Resources */,
 				D9A1B81F1F6D7E5500B95DF5 /* Assets.xcassets in Resources */,
 				D9A1B81D1F6D7E5500B95DF5 /* Main.storyboard in Resources */,
 			);
@@ -451,6 +458,7 @@
 			files = (
 				D9A1B81A1F6D7E5500B95DF5 /* ViewController.swift in Sources */,
 				D9A1B8181F6D7E5500B95DF5 /* AppDelegate.swift in Sources */,
+				D95C36691F6D869A006484C9 /* RoomJoinerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +715,7 @@
 				D9A1B83E1F6D7E5500B95DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9A1B83F1F6D7E5500B95DF5 /* Build configuration list for PBXNativeTarget "StudentCollabTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +724,7 @@
 				D9A1B8411F6D7E5500B95DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9A1B8421F6D7E5500B95DF5 /* Build configuration list for PBXNativeTarget "StudentCollabUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +733,7 @@
 				D9A1B8441F6D7E5500B95DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
