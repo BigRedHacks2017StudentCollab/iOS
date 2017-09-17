@@ -13,6 +13,7 @@
 		D95C366B1F6D8D1D006484C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D95C366A1F6D8D1D006484C9 /* GoogleService-Info.plist */; };
 		D95C366F1F6DAB02006484C9 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C366E1F6DAB02006484C9 /* RoomsViewController.swift */; };
 		D95C36731F6DABE6006484C9 /* RoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C36721F6DABE6006484C9 /* RoomsTableViewCell.swift */; };
+		D95C36771F6DF290006484C9 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C36761F6DF290006484C9 /* HostViewController.swift */; };
 		D9A1B8181F6D7E5500B95DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A1B8171F6D7E5500B95DF5 /* AppDelegate.swift */; };
 		D9A1B81A1F6D7E5500B95DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A1B8191F6D7E5500B95DF5 /* ViewController.swift */; };
 		D9A1B81D1F6D7E5500B95DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A1B81B1F6D7E5500B95DF5 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		D95C366A1F6D8D1D006484C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D95C366E1F6DAB02006484C9 /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		D95C36721F6DABE6006484C9 /* RoomsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsTableViewCell.swift; sourceTree = "<group>"; };
+		D95C36761F6DF290006484C9 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		D9A1B8141F6D7E5500B95DF5 /* StudentCollab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentCollab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A1B8171F6D7E5500B95DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A1B8191F6D7E5500B95DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				D9A1B8231F6D7E5500B95DF5 /* Info.plist */,
 				D95C366E1F6DAB02006484C9 /* RoomsViewController.swift */,
 				D95C36721F6DABE6006484C9 /* RoomsTableViewCell.swift */,
+				D95C36761F6DF290006484C9 /* HostViewController.swift */,
 			);
 			path = StudentCollab;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A1B81A1F6D7E5500B95DF5 /* ViewController.swift in Sources */,
+				D95C36771F6DF290006484C9 /* HostViewController.swift in Sources */,
 				D9A1B8181F6D7E5500B95DF5 /* AppDelegate.swift in Sources */,
 				D95C36731F6DABE6006484C9 /* RoomsTableViewCell.swift in Sources */,
 				D95C366F1F6DAB02006484C9 /* RoomsViewController.swift in Sources */,

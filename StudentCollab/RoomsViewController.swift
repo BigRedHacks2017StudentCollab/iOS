@@ -8,11 +8,23 @@
 
 import UIKit
 import Firebase
+import SCLAlertView
 
 class RoomsViewController: UIViewController, UITableViewDataSource{
-    
+
+
+    var createRoomAlert = SCLAlertView()
+
     @IBAction func createButtonClick(_ sender: Any) {
+        createRoomAlert.showInfo("Create Room", subTitle: "Create your own room!")
     }
+
+    let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+            kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+            kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!
+    )
+
     var ref: DatabaseReference!
     @IBOutlet weak var roomsTableView: UITableView!
     var roomsDatabaseListener : UInt!
@@ -40,13 +52,19 @@ class RoomsViewController: UIViewController, UITableViewDataSource{
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("section: \(indexPath.section)")
+        print("row: \(indexPath.row)")
+        let destination = UIViewController() // Your destination
+        navigationController?.pushViewController(destination, animated: true)
+    }
 
 
 
 
 
     override func viewDidLoad() {
-        ref = Database.database().reference()
+        ref = Database.database().reference().child("rooms")
         super.viewDidLoad()
         initialize();
         roomsTableView.dataSource = self
@@ -66,7 +84,7 @@ class RoomsViewController: UIViewController, UITableViewDataSource{
         // Firebase listener, this will trigger an update to the room listener
         // This will be using firebase Real time database. Take a look at the
         // Docs
-        roomsDatabaseListener = ref.child("rooms").observe(DataEventType.value, with: { (snapshot) in
+        roomsDatabaseListener = ref.observe(DataEventType.value, with: { (snapshot) in
             if !snapshot.exists() { return }
             self.rooms = [Room]();
             let enumerator = snapshot.children
@@ -86,9 +104,36 @@ class RoomsViewController: UIViewController, UITableViewDataSource{
     func createButtonDialogInit() {
         // Dialog setup for when the create button is clicked
         // Using SCL Alert View
+        createRoomAlert = SCLAlertView(appearance: appearance)
+        let nameText = createRoomAlert.addTextField("Room Name")
+        let hostText = createRoomAlert.addTextField("Enter your name")
+
+
+        createRoomAlert.addButton("Create Room") {
+            let name : String = nameText.text!
+            let host : String = hostText.text!
+            if(name == "" || host == ""){
+                return
+            }
+            self.ref?.removeObserver(withHandle: self.roomsDatabaseListener)
+            let directory = self.ref.child("room_"+String(arc4random_uniform(100)));
+            directory.child("status").setValue("inactive")
+            directory.child("host").setValue(self.cleanString(text: host))
+            directory.child("name").setValue(self.cleanString(text: name))
+            self.roomListenerInit()
+            directory.child("status").setValue("active")
+            self.createButtonDialogInit()
+        }
     }
-    
+
+    func cleanString(text:String) -> String {
+        let disallowedChars = CharacterSet.urlPathAllowed.inverted
+        return text.components(separatedBy: disallowedChars).joined(separator: "")
+    }
+
 }
+
+
 
 class Room {
     var name: String = ""
